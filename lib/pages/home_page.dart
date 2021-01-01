@@ -1,4 +1,5 @@
 import 'package:FluDo/main.dart';
+import 'package:FluDo/widgets/add_todo_dialog.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -36,6 +37,19 @@ class _HomePageState extends State<HomePage> {
             title: Text('Completed'),
           ),
         ],
+      ),
+      body: tabs[selectedIndex],
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        backgroundColor: Colors.black,
+        onPressed: () => showDialog(
+          context: context,
+          child: AddTodoDialogWidget(),
+          barrierDismissible: false,
+        ),
+        child: Icon(Icons.add),
       ),
     );
   }
