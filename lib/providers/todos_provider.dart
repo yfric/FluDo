@@ -22,4 +22,9 @@ class TodosProvider extends ChangeNotifier {
   ];
 
   List<Todo> get todos => _todos.where((todo) => !todo.isDone).toList();
+
+  void addTodo(Todo todo) {
+    _todos.add(todo);
+    notifyListeners();
+  }
 }
