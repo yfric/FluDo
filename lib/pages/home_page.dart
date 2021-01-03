@@ -1,5 +1,6 @@
 import 'package:FluDo/main.dart';
 import 'package:FluDo/widgets/add_todo_dialog.dart';
+import 'package:FluDo/widgets/completed_list_widget.dart';
 import 'package:FluDo/widgets/todo_list_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final tabs = [
       TodoListWidget(),
-      Container(),
+      CompletedListWidget(),
     ];
     return Scaffold(
       appBar: AppBar(
