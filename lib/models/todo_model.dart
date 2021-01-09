@@ -27,11 +27,14 @@ class Todo {
         'isDone': isDone,
       };
 
-  static Todo fromJson(Map<String, dynamic> json) => Todo(
-        createdTime: Utils.toDateTime(json['createdTime']),
-        title: json['title'],
-        description: json['description'],
-        id: json['id'],
-        isDone: json['isDone'],
-      );
+  static Todo fromJson(Map<String, dynamic> json) {
+    print('gets called');
+    return Todo(
+      createdTime: Utils.toDateTime(json['createdTime']),
+      title: json['title'],
+      description: json['description'],
+      id: json['id'],
+      isDone: json['isDone'],
+    );
+  }
 }

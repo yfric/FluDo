@@ -3,28 +3,18 @@ import 'package:FluDo/models/todo_model.dart';
 import 'package:flutter/material.dart';
 
 class TodosProvider extends ChangeNotifier {
-  List<Todo> _todos = [
-    Todo(
-      createdTime: DateTime.now(),
-      title: "Walk the Dog 🐕",
-    ),
-    Todo(
-      createdTime: DateTime.now(),
-      title: "Walk the Dog 🐕",
-    ),
-    Todo(
-      createdTime: DateTime.now(),
-      title: "Walk the Dog 🐕",
-    ),
-    Todo(
-      createdTime: DateTime.now(),
-      title: "Walk the Dog 🐕",
-    ),
-  ];
+  List<Todo> _todos = [];
 
   List<Todo> get todos => _todos.where((todo) => !todo.isDone).toList();
 
   List<Todo> get todosCompleted => _todos.where((todo) => todo.isDone).toList();
+
+  void setTodos(List<Todo> todos) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _todos = todos;
+      notifyListeners();
+    });
+  }
 
   void addTodo(Todo todo) {
     FirebaseApi.createTodo(todo);
