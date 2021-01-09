@@ -1,3 +1,4 @@
+import 'package:FluDo/api/firebase_api.dart';
 import 'package:FluDo/models/todo_model.dart';
 import 'package:flutter/material.dart';
 
@@ -26,8 +27,7 @@ class TodosProvider extends ChangeNotifier {
   List<Todo> get todosCompleted => _todos.where((todo) => todo.isDone).toList();
 
   void addTodo(Todo todo) {
-    _todos.add(todo);
-    notifyListeners();
+    FirebaseApi.createTodo(todo);
   }
 
   void removeTodo(Todo todo) {

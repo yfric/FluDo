@@ -29,7 +29,7 @@ class _AddTodoDialogWidgetState extends State<AddTodoDialogWidget> {
             ),
             TodoFormWidget(
               onChangedTitle: (title) => setState(() => this.title = title),
-              onChangedDescription: (desciption) =>
+              onChangedDescription: (description) =>
                   setState(() => this.description = description),
               onSavedTodo: addTodo,
             )
