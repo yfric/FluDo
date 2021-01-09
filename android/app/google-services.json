@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "338402117959",
+    "project_id": "todo-app-be5a6",
+    "storage_bucket": "todo-app-be5a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338402117959:android:24e3c24f4ac89bcbd52462",
+        "android_client_info": {
+          "package_name": "com.example.FluDo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338402117959-b8t4ipubs47sd1unrn65smaao6lsvv80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxhzloIUGYkwfxYxyvUkxsQH7tFGogp4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338402117959-b8t4ipubs47sd1unrn65smaao6lsvv80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
